@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Styled Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Montserrat, sans-serif;
+        background: #313e50;
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+      }
+
+      .text-input {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        outline: none;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        padding: 10px 10px 10px 100px;
+        transition: all 0.1s ease-out;
+        font-size: 1rem;
+      }
+
+      input[type="text"] + label,
+      input[type="email"] + label,
+      input[type="password"] + label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        border-radius: 3px 0 0 3px;
+        padding: 0 20px;
+        background: #e03616;
+        transform: translateY(0%);
+        transition: all 0.3s ease-in;
+      }
+
+      .text-input input:focus + label {
+        transform: translateY(-120%);
+        border-radius: 3px;
+        transition: all 0.1s ease-out;
+      }
+
+      .text-input input:focus {
+        padding-left: 10px;
+      }
+
+      button {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 3px;
+        background: #e03616;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background: #d62915;
+      }
+
+      @media (max-width: 600px) {
+        .text-input {
+          margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        button {
+          font-size: 0.9rem; /* Smaller font size for smaller screens */
+        }
+      }
+
+      @media (max-width: 400px) {
+        .text-input {
+          margin-bottom: 10px; /* Further adjust margin for very small screens */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        button {
+          font-size: 0.8rem; /* Smaller font size for very small screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form-container">
+      <div class="text-input">
+        <input type="text" id="input1" placeholder=" " required />
+        <label for="input1">Name</label>
+      </div>
+      <div class="text-input">
+        <input type="email" id="input2" placeholder=" " required />
+        <label for="input2">Email</label>
+      </div>
+      <div class="text-input">
+        <input type="password" id="input3" placeholder=" " required />
+        <label for="input3">Password</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
