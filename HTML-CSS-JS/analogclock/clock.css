@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #272626;
+  margin: 0;
+}
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 20px solid #8f8181;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.clock-face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateY(-3px);
+}
+.hand {
+  width: 50%;
+  background: #fffdfd;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+.hour-hand {
+  height: 10px;
+  background: blue;
+}
+.minute-hand {
+  height: 7px;
+}
+.second-hand {
+  height: 5px;
+  background: red;
+}
