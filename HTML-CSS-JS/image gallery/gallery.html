@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery with Lightbox Effect</title>
+    <link rel="stylesheet" href="gal.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <img
+        src="Default_beutiful_veiws_0.jpg"
+        alt="Image 1"
+        class="thumbnail"
+        onclick="openLightbox();
+      currentSlide(1)"
+      />
+      <img
+        src="Default_beutiful_veiws_1.jpg"
+        alt="Image 2"
+        class="thumbnail"
+        onclick="openLightbox();
+    currentSlide(1)"
+      />
+      <img
+        src="Default_beutiful_veiws_2.jpg"
+        alt="Image 3"
+        class="thumbnail"
+        onclick="openLightbox();
+  currentSlide(1)"
+      />
+    </div>
+    <div class="lightbox" id="lightbox">
+      <span class="close cursor" onclick="closeLightbox()"> &times; </span>
+      <div class="lightbox-content">
+        <div class="slides">
+          <img src="Default_beutiful_veiws_0.jpg" alt="image 1" />
+        </div>
+        <div class="slides">
+          <img src="Default_beutiful_veiws_1.jpg" alt="image 2" />
+        </div>
+        <div class="slides">
+          <img src="Default_beutiful_veiws_2.jpg" alt="image 3" />
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </div>
+    <script src="gal.js"></script>
+  </body>
+</html>
