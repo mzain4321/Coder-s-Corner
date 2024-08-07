@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customizable Calendar App</title>
+    <link rel="stylesheet" href="calender.css" />
+  </head>
+
+  <body>
+    <div class="calendar">
+      <div class="calendar-header">
+        <button id="prev-month">Prev</button>
+        <h2 id="current-month-year"></h2>
+        <button id="next-month">Next</button>
+      </div>
+      <div class="calendar-days">
+        <div class="calendar-day">Sun</div>
+        <div class="calendar-day">Mon</div>
+        <div class="calendar-day">Tue</div>
+        <div class="calendar-day">Wed</div>
+        <div class="calendar-day">Thu</div>
+        <div class="calendar-day">Fri</div>
+        <div class="calendar-day">Sat</div>
+      </div>
+      <div class="calendar-dates" id="calendar-dates"></div>
+    </div>
+
+    <div class="modal" id="event-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Event</h2>
+        <form id="event-form">
+          <label for="event-title">Event Title:</label>
+          <input type="text" id="event-title" name="event-title" required />
+          <label for="event-date">Date:</label>
+          <input type="date" id="event-date" name="event-date" required />
+          <label for="event-time">Time:</label>
+          <input type="time" id="event-time" name="event-time" />
+          <button type="submit">Add Event</button>
+        </form>
+      </div>
+    </div>
+    <script src="calende.js"></script>
+  </body>
+</html>
